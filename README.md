@@ -12,7 +12,7 @@ Application was deployed on Azure cloud as a docker instance.
 ## Author  
 
 *  Simranbanu Roshansha Diwan 
-[sm582590@dal.ca] (sm582590@dal.ca) 
+[sm582590@dal.ca](sm582590@dal.ca) 
 
 ### Links
 
