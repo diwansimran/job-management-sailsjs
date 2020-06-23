@@ -21,6 +21,9 @@ module.exports = {
        });
   },
   getOne562:function(req,res){
+    if(!req.param('jobName') || !req.param('id')){
+      res.send('name of the jobs and id required.')
+    }else{
       let jobName562=req.param('jobName');
       let id562=req.param('id');
       Jobs.find({jobName:req.param('jobName'),id:req.param('id')}).exec(function(err,jobs562){
@@ -33,9 +36,12 @@ module.exports = {
         }else{
         res.view('viewone',{jobs562});
         }
-   });
+    });}
   },
   create562:function(req,res){
+    if(!req.param('jobName') || !req.param('id')){
+      res.send('name of the jobs, id and quentity required.')
+    }else{
       var j562;
       let jobName562=req.param('jobName');
       let id562=req.param('id');
@@ -57,7 +63,7 @@ module.exports = {
         }else{
             res.send('job with jobName '+jobName562+' and id '+id562+' already exists.');
         }
-        });
+        });}
   },
   updatejob562:function(req,res){
     let jobName=req.param('jobName');
@@ -67,6 +73,9 @@ module.exports = {
   }
   ,
   update562:function(req,res){
+    if(!req.param('jobName') || !req.param('id')){
+      res.send('name of the jobs, id and quentity required.')
+    }else{
     let jobName562=req.param('jobName');
     let id562=req.param('id');
     let qty562=req.param('qty');
@@ -87,7 +96,7 @@ module.exports = {
           res.redirect('/jobs562');
        });
       }
-      });
+      });}
     },
     delete562:function(req,res){
         var j562;
