@@ -1,0 +1,46 @@
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/jobs562">View Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/adddata562">Add Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/finddata562">Find Data</a>
+            </li>
+           
+          </ul>
+        </div>
+    <div class="border border-dark rounded text-center mr-5 ml-5 pb-2 pt-2">
+    <h1 class="text-center"> Update your data! </h1>
+    <div class="d-inline-flex flex-column justify-content-center border border-dark rounded mr-5 ml-5 pb-2 pt-2 w-50 mb-3 border-right-0 border-left-0">
+        <div class="p-2">
+        Job Name: <%= jobName %>
+        <br/>
+        </div>
+        <div class="p-2">
+        Part Id: <%= id %>
+        <br/>
+        </div>
+    
+    <form action="/jobupdate562" method="POST">
+    <div class="p-2">
+    Qty: 
+    <input type="hidden" name="jobName" value="<%= jobName %>" />
+    <input type="hidden" name="id" value="<%= id %>" />
+    <input type="text", name="qty", value="<%= qty %>", required>
+    </div>
+    <div class="p-2">
+    <button class="btn btn-outline-success"> Submit </button>
+    </form>
+    </div>
+    </div>
+    
+</div>
+</body>
